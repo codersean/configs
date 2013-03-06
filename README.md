@@ -1,5 +1,5 @@
-vimconfig
+Configs
 =========
 
-My Vim Configuration Files
+Various config files I use on all my machines.
 
