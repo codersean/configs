@@ -26,11 +26,7 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 
-" set et
-"set smarttab
-"set tabstop=4		"
-"set shiftwidth=4	" number of spaces to use for indent			
-set ff=unix		" default to unix file format
+set ff=unix		    " default to unix file format
 
 " Set system spacific settings 
 if has('mac')

@@ -1,4 +1,5 @@
 vimconfig
 =========
 
-My VIm Configuration Files
+My Vim Configuration Files
+
