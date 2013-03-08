@@ -7,6 +7,9 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" don't treat 007 as octal when using <C-a> and <C-x>
+set nrformats=
+
 set t_Co=256		" use 256 terminal colors for full glory
 color codersean		" use custom color scheme
 
