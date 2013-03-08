@@ -1,4 +1,5 @@
 " Sean Long custom settings
+" this file is available at: https://github.com/codersean/configs
 
 " Places to find cool customizations
 " http://choorucode.com/tag/vim/
