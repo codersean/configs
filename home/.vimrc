@@ -1,12 +1,24 @@
-" Sean Long custom settings
-" this file is available at: https://github.com/codersean/configs
+" Sean Long, aka codersean, custom settings
+" this file is available at: 
+" - https://github.com/codersean/configs/home/.vimrc
 
-" Places to find cool customizations
+" places to find cool customizations
 " http://choorucode.com/tag/vim/
+
+" use pathogen to manage plugins
+execute pathogen#infect()
 
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+
+set modeline
+
+" Turns on airline
+set laststatus=2
+
+let g:move_key_modifier = 'C'
+"let g:airline_powerline_fonts = 1
 
 " don't treat 007 as octal when using <C-a> and <C-x>
 set nrformats=
@@ -17,18 +29,19 @@ color codersean		" use custom color scheme
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set history=50		" keep 50 lines of command line history
+set history=200		" keep 200 lines of command line history
 set ruler		    " show the cursor position all the time
 set showcmd		    " display incomplete commands
 set incsearch		" do incremental searching
 
 set number		    " turn on line numbering
 
-set expandtab
+" set expandtab
+set smarttab
 set tabstop=4
-set softtabstop=4
+"set softtabstop=4
 set shiftwidth=4
-set autoindent
+"set autoindent
 
 set ff=unix		    " default to unix file format
 
@@ -36,15 +49,18 @@ set ff=unix		    " default to unix file format
 if has('mac')
 
     set gfn=Menlo:h12  "Monaco:h14	
+    "set gfn=Literation\ Mono\ Powerline:h12
 
 elseif has('win32')
 
     set gfn=courier_new:h10
+    "set gfn=Literation\ Mono\ Powerline:h12
 
 elseif has('unix')
 
-"    set gfn=FreeMono\ 12
+    "set gfn=FreeMono\ 12
     set gfn=Liberation\ Mono\ 11
+    "set gfn=Literation\ Mono\ Powerline\ 12
 
 endif
 
@@ -69,6 +85,8 @@ if has("autocmd")
 	" Also load indent files, to automatically do language-dependent indenting.
 	filetype plugin indent on
 
+    " fix python mode
+    autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 else
 
 	set autoindent		" always set autoindenting on
