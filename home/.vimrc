@@ -103,6 +103,9 @@ endif
 
 " Key mapping
 
+" have this to clear previous search highlighing
+nnoremap <leader><space> :noh<cr>
+
 " Map keys to easily move between windows without using arrow keys
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
@@ -121,8 +124,12 @@ autocmd InsertEnter * setlocal colorcolumn=120
 autocmd InsertLeave * setlocal colorcolumn=0
 augroup END
 
+
 " TESTING AREA
 "
+" This will add the sudow ex command so can save a read-only file within vim
+"cnoremap Sudow w !sudo tee % >/dev/null
+
 " This will open GVIM up in full screen mode
 "autocmd GUIEnter * simalt ~x
 
