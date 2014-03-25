@@ -103,8 +103,19 @@ endif
 
 " Key mapping
 
+" set the leader to the spacebar
+let mapleader = "\<Space>"
+
 " have this to clear previous search highlighing
 nnoremap <leader><space> :noh<cr>
+
+" map <Leader>p or and <Leader>y to copy & paste to system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 
 " Map keys to easily move between windows without using arrow keys
 nmap <silent> <C-h> :wincmd h<CR>
@@ -124,12 +135,13 @@ autocmd InsertEnter * setlocal colorcolumn=120
 autocmd InsertLeave * setlocal colorcolumn=0
 augroup END
 
+" Remap F1 to esc for times when miss hitting esc, can use :h for help
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
 
 " TESTING AREA
 "
-" This will add the sudow ex command so can save a read-only file within vim
-"cnoremap Sudow w !sudo tee % >/dev/null
-
 " This will open GVIM up in full screen mode
 "autocmd GUIEnter * simalt ~x
 
