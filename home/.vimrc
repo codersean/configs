@@ -26,6 +26,13 @@ set nrformats=
 set t_Co=256		" use 256 terminal colors for full glory
 color codersean		" use custom color scheme
 
+" store all the .swp files in one place
+set dir=~/.vimswp
+
+" set where to find tags
+" dir of current file, current dir, home/tags
+set tags=./tags,tags,~/tags
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -123,8 +130,8 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-" Tag List plugin settings
-nnoremap <silent> <F8> :TlistToggle<CR>
+" Tagbar plugin settings
+nmap <F8> :TagbarToggle<CR>
 
 " This will show a vertical line at column x while in insert mode
 highlight ColorColumn ctermbg=5

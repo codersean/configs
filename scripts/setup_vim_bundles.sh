@@ -2,6 +2,9 @@
 #
 # NOTE: for a windows version change ~/.vim to ~\vimfiles
 
+#make sure place to store swp files exists
+mkdir -p ~/.vimswp
+
 echo "Setting up Pathogen to manage vim plugins"
 
 echo "- Getting pathogen"
@@ -19,11 +22,5 @@ git clone https://github.com/matze/vim-move ~/.vim/bundle/vim-move
 git clone https://github.com/tpope/vim-surround ~/.vim/bundle/vim-surround
 git clone https://github.com/tpope/vim-repeat ~/.vim/bundle/vim-repeat
 git clone https://github.com/tpope/vim-eunuch ~/.vim/bundle/vim-eunuch
-
-#Special work needed for this taglist, version taglist 4.6
-curl -Sso ~/.vim/bundle/taglist.zip http://vim.sourceforge.net/scripts/download_script.php?src_id=19574 
-mkdir -p ~/.vim/bundle/taglist
-cd ~/.vim/bundle/taglist
-unzip ~/.vim/bundle/taglist.zip
-rm ~/.vim/bundle/taglist.zip
+git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
 
