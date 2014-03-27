@@ -26,12 +26,6 @@ set nrformats=
 set t_Co=256		" use 256 terminal colors for full glory
 color codersean		" use custom color scheme
 
-" store all the .swp files in one place
-set dir=~/.vimswp
-
-" set where to find tags
-" dir of current file, current dir, home/tags
-set tags=./tags,tags,~/tags
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -58,10 +52,24 @@ if has('mac')
     set gfn=Menlo:h12  "Monaco:h14	
     "set gfn=Literation\ Mono\ Powerline:h12
 
+	" store all the .swp files in one place
+	set dir=~/.vimswp
+
+	" set where to find tags
+	" dir of current file, current dir, home/.vimtags
+	set tags=./tags,tags,~/.vimtags
+
 elseif has('win32')
 
     set gfn=courier_new:h10
     "set gfn=Literation\ Mono\ Powerline:h12
+
+	" store all the .swp files in one place
+	set dir=~/_vimswp
+
+	" set where to find tags
+	" dir of current file, current dir, home/_vimtags
+	set tags=./tags,tags,~/_vimtags
 
 elseif has('unix')
 
@@ -69,6 +77,13 @@ elseif has('unix')
     set gfn=Liberation\ Mono\ 11
     "set gfn=Literation\ Mono\ Powerline\ 12
 
+	" store all the .swp files in one place
+	set dir=~/.vimswp
+
+	" set where to find tags
+	" dir of current file, current dir, home/.vimtags
+	set tags=./tags,tags,~/.vimtags
+	
 endif
 
 " In many terminal emulators the mouse works just fine, thus enable it.
