@@ -23,4 +23,5 @@ git clone https://github.com/tpope/vim-surround ~/.vim/bundle/vim-surround
 git clone https://github.com/tpope/vim-repeat ~/.vim/bundle/vim-repeat
 git clone https://github.com/tpope/vim-eunuch ~/.vim/bundle/vim-eunuch
 git clone https://github.com/majutsushi/tagbar ~/.vim/bundle/tagbar
+git clone https://github.com/altercation/vim-colors-solarized.git ~/.vim/bundle/vim-colors-solarized
 
