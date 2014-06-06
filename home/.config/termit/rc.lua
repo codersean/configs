@@ -5,7 +5,8 @@ defaults = {}
 defaults.scrollbackLines = 1000
 defaults.geometry = '110x36'
 defaults.hideSingleTab = true
-defaults.transparency = 0.5
+defaults.hideMenubar   = true
+defaults.transparency  = 0.2
 
 bindKey('CtrlShift-c',    copy)
 bindKey('CtrlShift-v',    paste)
